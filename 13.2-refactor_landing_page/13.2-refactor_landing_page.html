@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <title>13.2</title>
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Pacifico;
+        }
+
+        .wrapper-cont {
+            width: 100vw;
+            height: 100%;
+            background: #282923;
+        }
+
+        .wrapper {
+            max-width: 80vw;
+            margin-left: 10vw;
+            background:rgb(231, 225, 167);
+        }
+
+        nav {
+            background: rgb(231, 225, 167);
+            border-radius: 0 0 20px 20px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            box-shadow: 3px 3px 20px rgb(189, 180, 104);
+            height: 30px;
+            margin-bottom: 10px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            margin: 0 10px;
+            color: rgb(155, 72, 72);
+        }
+
+        .dev-joke-img {
+            width: 100%;
+            border-radius: 10px 10px 0 0 ;
+        }
+
+        .titles {
+            text-align: center;
+            line-height: 50px;
+            height: 90vh;
+        }
+
+        .img-btn {
+            width: 200px; 
+            height: 30px;
+            margin: 10px 0 30px 0;
+            font-family: Pacifico;
+            border-radius: 10px 10px;
+            background:rgb(231, 225, 167);
+            outline: none;
+            border: 2px solid rgb(233, 223, 136);
+            box-shadow: 2px 2px 10px rgb(233, 223, 136);
+            opacity: 0.7;
+            transition: 0.5s;
+        }
+
+        .img-btn:hover {
+            cursor: pointer;
+            opacity: 1;
+        }
+
+        .card {
+            background:rgb(255, 249, 194);
+            box-shadow: 3px 3px 20px rgb(151, 144, 84);
+            border-radius: 20px 20px;
+            padding: 10px 10px;
+            text-align: center;
+            max-width: 700px;
+        }
+
+        .profile-img {
+            width: 50%;
+        }
+
+        span {
+            color: red;
+        }
+
+        li {
+            display: inline-block;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="wrapper-cont">
+        <div class="wrapper">
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">About</a></li>
+                </ul>
+            </nav>
+            <section class="top-middle">
+                <header class="titles">
+                    <div class="dev-joke-img-cont">
+                        <img class="dev-joke-img" src="images/1582215268835.jpeg" alt="dev-joke-img">
+                    </div>
+                    <h1 class="title t1">Hello, my name is Daniel Shamir</h1>
+                    <h3 class="title t2">I am a programmer to be...</h3>
+                </header>
+                <main class="card">
+                    <div class>
+                        <img id="profile-img" class="profile-img" src="images/WhatsApp Image 2021-10-25 at 09.46.22.jpeg" alt="my-profile-pic">
+                    </div>
+                    <br>
+                    <button class="img-btn" onClick="enlargeImg()">Enlarge profile image</button>
+                    <p>
+                        I'm 28 years old Married + half a &nbsp; year old baby + a two years old female dog. I Live in Kibbutz Gevim(next to Sderot). Last year student of computer science. I always loved computers and ever since my dad brought me my first book in C language ,when I was in elementary school, <br><span>I fell in love with programming &#128525;</span>
+                    </p>
+                </main>
+            </section>
+            <footer class="social-media">
+                <h4>Follow me:</h4>
+                <ul>
+                    <li class="link first">
+                        <a href="https://www.facebook.com/" target="_blank">
+                            <img alt="facebook" src="https://www.botanic.co.il/wp-content/uploads/2021/05/facebook-icon-logo-C61047A9E7-seeklogo.com_.png"
+                            width="30" height="30">
+                        </a>
+                    </li>
+                    <li class="link second">
+                        <a href="https://www.linkedin.com/" target="_blank">
+                            <img alt="linkedin" src="https://upload.wikimedia.org/wikipedia/commons/c/c9/Linkedin.svg"
+                            width="30" height="30">
+                        </a>
+                    </li>
+                </ul>
+            </footer>
+        </div>
+    </div>
+</body>
+<script>
+    let isImgEnlarged = true;
+    let enlargeImg = () => {
+        if (isImgEnlarged) {
+            document.getElementById('profile-img').style.width = '100%';
+            document.querySelector('.img-btn').textContent = 'reduce profile image';
+            isImgEnlarged = false
+        } else {
+            document.getElementById('profile-img').style.width = '50%';
+            document.querySelector('.img-btn').textContent = 'Enlarge profile image';
+            isImgEnlarged = true
+        }
+    }
+</script>
+</html>
