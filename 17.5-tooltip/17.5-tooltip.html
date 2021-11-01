@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>17.5</title>
+</head>
+<style>
+
+    h1 {
+        margin-bottom: 50px;
+    }
+
+    p {
+        line-height: 25px;
+    }
+
+    a {
+        position: relative;
+    }
+
+    a:before {
+        content: "";
+        transform: rotate(45deg);
+        position: absolute;
+        background: black;
+        background: rgb(240, 240, 56);
+        width: 20px;
+        height: 20px;
+        top: -30px;
+        left: 50px;
+        display: none;
+    }
+
+    a:after {
+        content: "tooltip: https://en.wikipedia.org/wiki/Warner_Bros.";
+        position: absolute;
+        background: rgb(240, 240, 56);
+        color: purple;
+        border-radius: 20px;
+        padding: 5px;
+        left: 0;
+        top: -70px;
+        line-height: 20px;
+        font-size: 0.8rem;
+        display: none;
+    }
+
+    a:hover:before {
+        display: block;
+    }
+
+    a:hover:after {
+        display: block;
+    }
+
+</style>
+<body>
+    <div class="wrapper">
+        <h1>Looney Tunes</h1>
+        <p>
+            Looney Tunes is an American animated comedy short film series produced by <a href="https://en.wikipedia.org/wiki/Warner_Bros.">Warner Bros</a>. from 1930 to 1969, along with an accompanying series, Merrie Melodies, during the golden age of American animation.[2][3] The two series introduced Bugs Bunny, Daffy Duck, Porky Pig, Elmer Fudd, Wile E. Coyote, the Road Runner, Tweety, Sylvester, Granny, Yosemite Sam, the Tasmanian Devil, Marvin the Martian, Pepé Le Pew, Foghorn Leghorn, Speedy Gonzales and many other cartoon characters. </p>
+        <p>
+            ooney Tunes (and Merrie Melodies) were initially produced by Leon Schlesinger and animators Hugh Harman and Rudolph Ising from 1930 to 1933.[4] Schlesinger assumed full production from 1933 until selling his studio to <a href="https://en.wikipedia.org/wiki/Warner_Bros.">Warner Bros</a>. in 1944.[4] The Looney Tunes name was inspired by Walt Disney's musical cartoon series, Silly Symphonies.[4] The shorts initially showcased musical compositions whose rights were held by Warner's music publishing interests through the adventures of cartoon characters such as Bosko and, after losing him, Buddy.[4] However, the animation studio gained a higher profile after it brought in directors Tex Avery and Chuck Jones and voice actor Mel Blanc in the mid-1930s.[4] Porky Pig and Daffy Duck became the main stars of Looney Tunes at this time, while Merrie Melodies featured one-shot cartoons and minor recurring characters.[4]</p>
+    </div>
+</body>
+</html>
