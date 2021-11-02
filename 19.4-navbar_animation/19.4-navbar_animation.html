@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>19.1</title>
+</head>
+<style>
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 100vh;
+        list-style-type: none;
+    }
+
+    li {
+        position: relative;
+    }
+
+    li:hover {
+        cursor: pointer;
+    }
+
+    li:before {
+        content: "";
+        position: absolute;
+        background: black;
+        width: 0;
+        height: 2px;
+        top: -5px;
+    }
+
+    li:hover::before {
+        animation-name: animate-top;
+        animation: animate-top 1s forwards ease;
+        
+    }
+
+    @keyframes animate-top {
+        to {
+            width: 100%;
+        }
+    }
+
+    li:after {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 2px;
+        background: black;
+        right: 0;
+        bottom: -5px;
+    }
+
+    li:hover::after {
+        animation-name: animate-bottom;
+        animation: animate-top 1s forwards ease;
+        
+    }
+
+    @keyframes animate-bottom {
+        to {
+            width: 100%;
+        }
+    }
+
+    
+</style>
+<body>
+    <div class="wrapper">
+        <nav>
+            <ul>
+                <li>
+                    <p>Home</p>
+                </li>
+                <li>
+                    <p>About</p>
+                </li>
+                <li>
+                    <p>Services</p>
+                </li>
+                <li>
+                    <p>Portfolio</p>
+                </li>
+                <li>
+                    <p>Contact</p>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</body>
+</html>
