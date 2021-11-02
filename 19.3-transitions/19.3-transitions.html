@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>19.3</title>
+</head>
+<style>
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .wrapper {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        align-content: center;
+        height: 100vh;
+        flex-wrap: wrap;
+    }
+
+    span {
+        border: 1px solid black;
+        padding: 20px;
+        position: relative;
+        overflow: hidden;
+    }
+
+    span:hover {
+        cursor: pointer;
+    }
+
+    .rotate::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        transform-origin: bottom right;
+        background: yellow;
+        transform: rotate(90deg);
+        top: -100%;
+        left: -100%;
+        transition: all 1s ease;
+    }
+
+    .rotate:hover::before {
+        transform: rotate(180deg);
+    }
+
+    .translate::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: gray;
+      left: -100%;
+      top:0;
+      transition: all 1s ease;
+    }
+
+    .translate:hover {
+      color: white;
+    }
+
+    .translate:hover::before {
+        left: 0;
+        z-index: -1;
+    }
+
+    .translate-y::before {
+        content: 'yeah!';
+        position: absolute;
+        text-align: center;
+        width: 100%;
+        height: 100%;
+        background: rgb(255, 0, 0);
+        left: 0;
+        top: -100%;
+        line-height: 55px;
+        transition: all 0.2s ease;
+    }
+
+    .translate-y:hover::before {
+        top: 0;
+        color: black;
+    }
+
+    .scale-opacity::after {
+        content: 'Scale & Opacity';
+        position: absolute;
+        background: black;
+        color: white;
+        text-align: center;
+        width: 200%;
+        height: 200%;
+        top: -50%;
+        left:-50%;
+        font-size: 40px;
+        line-height: 120px;
+        opacity: 0;
+        transition: all 1s ease;
+    }
+
+    .scale-opacity:hover::after {
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        line-height: 60px;
+        font-size: unset;
+        opacity: 1;
+    }
+    
+
+</style>
+<body>
+    <div class="wrapper">
+        <span class="rotate">Rotate</span>
+        <span class="translate">Translate</span>
+        <span class="translate-y">TranslateY</span>
+        <span class="scale-opacity">Scale & Opacity</span>
+    </div>
+</body>
+</html>
