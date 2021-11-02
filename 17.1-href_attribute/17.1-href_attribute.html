@@ -14,13 +14,22 @@
     }
 
     a:after {
-        content: "https://github.com/DanielShamir93/CSS";
+        content: attr(href);
         color: purple;
     }
+
+    a:hover:after {
+        content: attr(data);
+        color: green;
+    }
+
+
+
+
 </style>
 <body>
     <div class="wrapper">
-        <a href="https://github.com/DanielShamir93/CSS">Pleas visit my Github CSS repo: </a>
+        <a data="wow" href="https://github.com/DanielShamir93/CSS">Pleas visit my Github CSS repo: </a>
     </div>
 </body>
 </html>
