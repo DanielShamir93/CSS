@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>24.1</title>
+</head>
+<style>
+
+
+    .wrapper {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+    }
+
+    div {
+        margin: 2px;
+        padding: 20px;
+        border-radius: 10px;
+    }
+
+    .div1 {
+        grid-column: 1 / span 2;
+    }
+
+    .div2 {
+        grid-column: 3 / span 4;
+    }
+
+    .div4 {
+        grid-column: 2 / span 4;
+    }
+
+    .div5 {
+        grid-column: 1 / span 4;
+    }
+
+</style>
+<body>
+    <div class="wrapper">
+        <div class="div1" style="background: red"></div>
+        <div class="div2" style="background: blue"></div>
+        <div class="div3" style="background: green"></div>
+        <div class="div4" style="background: purple"></div>
+        <div class="div5" style="background: yellow"></div>
+    </div>
+</body>
+</html>
